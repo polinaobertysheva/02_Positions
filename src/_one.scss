@@ -1,0 +1,60 @@
+$bigRadius: 5em;
+$littleRadius: 1em;
+
+ul {
+  list-style: none;
+}
+
+.big-circle_cont {
+  margin: 2em;
+}
+
+.big-circle {
+  background-color: orange;
+  border-radius: 50%;
+  height: $bigRadius*2;
+  width: $bigRadius*2;
+  position: relative;
+}
+
+.little-circle_cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1em;
+}
+
+.little-circle_cont {
+  &:nth-child(1) {
+    transform: translateY(-$bigRadius);
+  }
+  &:nth-child(2) {
+    transform: rotate(45deg) translateX($bigRadius) rotate(-45deg);
+  }
+  &:nth-child(3) {
+    transform: translateX($bigRadius);
+  }
+  &:nth-child(4) {
+    transform: rotate(135deg) translateX($bigRadius) rotate(-135deg);
+  }
+  &:nth-child(5) {
+    transform: translateY($bigRadius);
+  }
+  &:nth-child(6) {
+    transform: rotate(225deg) translateX($bigRadius) rotate(-225deg);
+
+  }
+  &:nth-child(7) {
+    transform: translateX(-$bigRadius);
+  }
+  &:nth-child(8) {
+    transform: rotate(315deg) translateX($bigRadius) rotate(-315deg);
+  }
+}
+
+.little-circle {
+  border-radius: 50%;
+  height: $littleRadius*2;
+  width: $littleRadius*2;
+  background-color: lightgreen;
+}
